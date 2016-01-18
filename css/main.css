@@ -1,9 +1,11 @@
-
-
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     overflow-X:hidden;
     
+}
+hr {
+  margin:0 30%;
+  border:yellow;
 }
 
 .button-play-spot{
@@ -42,8 +44,10 @@ body {
 
   }
 .img-apple-store {
-    position: relative;
-    top: 160px;
+    position: absolute;
+    top: 580px;
+    width:100%;
+    margin:0 auto;
 }
 .img-apple-store a img {
   height:41px;
@@ -120,6 +124,13 @@ body {
   right:8px;
 }
 
+#myCarousel img {
+  filter:brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -moz-filter: brightness(60%);
+}
+
 
 .neighborhood-guides {
     background-color: #fff;
@@ -159,15 +170,31 @@ body {
     text-align:center;
     margin-top: 40px;
 }
+.section-1{
+  background-color: rgba(0,175,180,0.6);
+   background: linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+  background: -moz-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+  background: -o-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+  background: -webkit-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+ 
+}
+.section-3{
+  background-color: rgba(0,175,180,0.6);
+   background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+  background: -moz-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+  background: -o-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+  background: -webkit-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+ 
+}
 .section-1, .section-3{
-  background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.1));
+  background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
   border-bottom:1px solid rgba(0,175,180,1); 
-  border-top: 1px solid rgba(0,175,180,1);
-  box-shadow: 1px 1px 5px rgba(0,175,180,1);
+  border-top: 2px solid rgba(0,175,180,1);
+  box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,1) inset;
+  padding-bottom: 20px
 }
 .section-2{
-  background: linear-gradient(rgba(255,255,255,1),rgba(0,175,180,0.2));
-  box-shadow: 1px -1px 3px rgba(0,175,180,1);
+  box-shadow: 0 0 25px rgba(0,175,180,0.3) inset, 0 0 20px rgba(0,175,180,0.3) inset;
 }
 
 .slideshow {
@@ -203,7 +230,8 @@ body {
 }
 
 .thumbnail-bis {
-    margin: 15%;
+    margin: 10% 15%;
+    padding:10px;
     font-size: 2vw;
     line-height: 1.5em;
     text-align:center;
@@ -278,6 +306,12 @@ text-align:left ;
   background-color: #fff;
 
 }
+@media all and (min-width: 768px) and (max-width: 992px){
+  .img-apple-store{
+    position:relative;
+    top:220px;
+  }
+}
 
 
 @media all and (max-width: 768px){
@@ -285,6 +319,7 @@ text-align:left ;
   body{
     
   }
+
   .img-apple-store > a > img{
     width:100px;
 
@@ -302,8 +337,13 @@ text-align:left ;
   .third-paragraph{
     padding-top: 4%;
     margin:4% 15% ;
-}
-
+  }
+  .jumbotron {
+    height:400px;
+  }
+  #myCarousel img {
+    height:400px;
+  }
   .jumbotron h1 {
     font-size: 24px;
   }
@@ -322,15 +362,40 @@ text-align:left ;
   }
   .img-apple-store{
     position:relative;
-    top:150px;
+    top:120px;
+  }
+  .img-apple-store img{
+    width:70px;
   }
   .button-play-spot{
-    margin-top: 20px
+    margin-top: 60px
   }
-  .catch-phrase{
+  .button-play-intro{
+    position: relative;
+    top:0px;
+  }
+  .button-play-intro img{
+    width:80px;
+  }
+  .neighborhood-guides > .container > .catch-phrase{
     font-size:20px;
 
   }
-
+  .jumbotron-content h1{
+    position:relative;
+    top:20px;
+    font-size:22px;
+  }
+  .logo-spot{
+    position:relative;
+    top:20px;
+    width:30%;
+  }
+   .description-appli img{
+    width:100%;
+   } 
+   .section-1, .section-2, .section-3{
+    padding-bottom:30px;
+   }
     
 }

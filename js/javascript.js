@@ -19,8 +19,7 @@ var initVideo = function () {
         
     };
     $(document).ready(initVideo) ;
-
-
+    
 //slideshow class description-appli
 
    /*$(function(){
@@ -31,10 +30,45 @@ var initVideo = function () {
       }, 4000);
    });*/
 
- $(function(){
+$(function(){
   $('#myCarousel').carousel({ interval: 5000 });
-  
- });
+
+  $('.description-appli img').mouseover(function(){
+    if($(window).width() > 700){
+      $(this).css('width','61%');
+    }
+  });
+  $(' .description-appli img').mouseout(function(){
+    if($(window).width() > 700){
+      $(this).css('width','60%');
+    }
+  });
+  $('i').mouseover(function(){
+    $(this).css('position','relative').css('top','-3px');
+    $(this).css('color','#ffff00');
+    $(this).next().css('color','#ffff00');
+  });
+  $('i').mouseout(function(){
+    $(this).css('position','relative').css('top','3px');
+    $(this).css('color','rgba(0,175,180,1)');
+    $(this).next().css('color','rgba(0,175,180,1)');
+  });
+$(window).on('resize load',function(){
+  if($(window).width() < 500){
+    $('.description-appli img').css('width','100%');
+    $('.thumbnail-bis').css('margin','10%');
+    $('.catch-phrase').css('font-size','20px');
+    $('footer i').addClass('fa-3x')
+  }
+  else{
+    $('.description-appli img').css('width','60%');
+    $('.thumbnail-bis').css('margin','10%');
+    $('.catch-phrase').css('font-size','28px');
+    $('footer i').addClass('fa-2x')
+  }
+});
+
+});
 
 
 
