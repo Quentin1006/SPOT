@@ -45,8 +45,8 @@ $(function(){
   });
   $('i').mouseover(function(){
     $(this).css('position','relative').css('top','-3px');
-    $(this).css('color','#ffff00');
-    $(this).next().css('color','#ffff00');
+    $(this).css('color','rgba(0,175,180,0.2)');
+    $(this).next().css('color','rgba(0,175,180,0.6)');
   });
   $('i').mouseout(function(){
     $(this).css('position','relative').css('top','3px');
@@ -54,11 +54,13 @@ $(function(){
     $(this).next().css('color','rgba(0,175,180,1)');
   });
 $(window).on('resize load',function(){
+   var height = $('.section-2').css('height');
+    $('.section-3').css('height',height);
   if($(window).width() < 500){
     $('.description-appli img').css('width','100%');
     $('.thumbnail-bis').css('margin','10%');
     $('.catch-phrase').css('font-size','20px');
-    $('footer i').addClass('fa-3x')
+    $('footer i').addClass('fa-3x');
   }
   else{
     $('.description-appli img').css('width','60%');
@@ -67,6 +69,17 @@ $(window).on('resize load',function(){
     $('footer i').addClass('fa-2x')
   }
 });
+
+$(document).scroll(function(){
+  console.log(window.scrollY)
+  if(window.scrollY> 620){
+    $('nav').fadeIn(1000);
+  }
+  else{
+    $('nav').css('display','none')
+  }
+})
+
 
 });
 

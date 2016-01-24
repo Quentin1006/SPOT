@@ -3,6 +3,10 @@ body {
     overflow-X:hidden;
     
 }
+nav{
+  display:none;
+ background: -webkit-radial-gradient(circle, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+}
 hr {
   margin:0 30%;
   border:yellow;
@@ -176,6 +180,7 @@ hr {
   background: -moz-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
   background: -o-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
   background: -webkit-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+  padding-bottom: 20px
  
 }
 .section-3{
@@ -184,6 +189,7 @@ hr {
   background: -moz-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
   background: -o-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
   background: -webkit-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+  padding-bottom:20px;
  
 }
 .section-1, .section-3{
@@ -191,7 +197,6 @@ hr {
   border-bottom:1px solid rgba(0,175,180,1); 
   border-top: 2px solid rgba(0,175,180,1);
   box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,1) inset;
-  padding-bottom: 20px
 }
 .section-2{
   box-shadow: 0 0 25px rgba(0,175,180,0.3) inset, 0 0 20px rgba(0,175,180,0.3) inset;
@@ -214,11 +219,15 @@ hr {
 .slideshow li {
    float: left;
 }
+.thumbnail i {
+  transition : all 1s;
+}
 
 .thumbnail h3 {
     font-weight: bold;
     color:#00afb4;
     text-align: center;
+     transition : all 5s;
 
 }
 

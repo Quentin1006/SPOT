@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 
   <head>
     <meta charset="UTF-8">
@@ -25,7 +25,21 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "////connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <header> 
+    <nav class="navbar navbar-fixed-top ">
+  <div class="container-fluid text-center">
+        <img alt="Brand" src="img/spot1.png "width="10%">
+  </div>
+</nav>
 <div class="jumbotron">
     <div class="container">
 
@@ -80,7 +94,7 @@
                     <img src="img/app-store.png"/>
                 </a>&nbsp;
                 <a class="hidden-xs" href="https://www.facebook.com/applicationspot?__mref=message_bubble" class="btn text-left">
-                    <img class="img-rounded" src="img/facebook-like.png" >
+                    <img class="img-rounded" src="img/facebook-like-2.png" >
                     <!-- Construction logo : style="background:-webkit-linear-gradient(left bottom,#3b5998,#4e69a2); color:#fff; width:128px; height:42px; border-radius:6px;" 
                     <i class="fa fa-facebook-official " style="font-size:30px; position:relative; left:-20px; color:#fff"></i><span style="position:relative; top:-4px; letter-spacing: 3px; font-size:18px">Like </span> -->
                 </a>
@@ -205,6 +219,7 @@
             <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                 <div class="thumbnail-bis">
                        <img  class="img-rounded img-thumbnail" src="img/image-description-3.png" alt="image description 3" width="60%">
+
                 </div>
             </div> 
         </div>          
@@ -224,6 +239,7 @@
                 <i class="fa fa-facebook-official fa-2x" style="color:#00afb4"></i>
                 <span  class="hidden-xs" style="font-size:20px">Facebook</span>
             </a>
+            <div class="fb-like" data-href="http://http://spot-app.net/" data-width="600" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
           </div>
           <div class="col-xs-4  info-footer">
 
