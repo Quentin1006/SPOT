@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="ngSocial">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPOT</title>
+    <meta name="description" content="Application pour géolocaliser les amis qui sont proches de nous">
+    <meta name="keywords" content="application, géolocalisation, amis, partage, confidentialité, spot">
+    <meta property="og:url" content="http://spot-app.net" />
+    <meta property="og:type" content="application" />
+    <meta property="og:title" content="Spot:Ne loupes plus tes amis" />
+    <meta property="og:description"  content="Application pour géolocaliser les amis qui sont proches de nous" />
+    <meta property="og:image" content="" />
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/facebook.css">
+    <link rel="icon" href="../img/favicon.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body ng-controller="FacebookCtrl">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ngSocial</a>
+    </div>
+</nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="">
+            <h4>{{welcomeMsg}}</h4>
+            <p>
+              <div ng-if="!isLoggedIn">
+            <button type="button" class="btn btn-default" ng-click="login()">Log In</button>
+              </div>
+              <div ng-if="isLoggedIn">
+                <a href="{{userInfo.link}}" target="_blank"><img ng-src="{{picture}}"></a><br/>
+            <button type="button" class="btn btn-default" ng-click="logout()">Log Out</button>
+              </div>
+            </p>
+          </div>
+          <div class="well">
+            <h5>User Infos</h5>
+            <ul>
+              <li>ID: {{userInfo.id}}</li>
+              <li>First Name: {{userInfo.first_name}}</li>
+              <li>Last Name: {{userInfo.last_name}}</li>
+              <li>Email: {{userInfo.email}}</li>
+              <li>locale: {{userInfo.locale}}</li>
+            </ul>
+          </div>
+
+          <div class="well">
+            <h5>Permissions</h5>
+            <ul ng-repeat="permission in permissions">
+              <li>{{permission.permission}} - {{permission.status}}</li>
+              
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-md-8">
+        <h3>Welcome to Facebook!</h3>
+        <div ng-if="isLoggedIn">
+          <form ng-submit="postStatus()">
+            <div class="form-group">
+              <div>{{msg}}</div>
+              <label>Status Update</label>
+              <textarea ng-model="body" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <br><br>
+          <div ng-repeat="post in posts" class="stbody">
+            <div class="stimg"> 
+                  <img ng-src="{{picture}}">
+              </div> 
+              <div class="sttext"> 
+                  {{post.message}}
+              <div class="sttime">{{post.updated_time}}</div> 
+              </div> 
+          </div>
+        </div>
+        <div ng-if="isLoggedIn == false">
+          <p>You need to login to post</p>
+        </div>
+      </div>
+
+
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/ngFacebook.js"></script>
+    <script src="facebook/facebook.js"></script>
+  </body>
+</html>
