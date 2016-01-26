@@ -55,23 +55,27 @@ $(function(){
   });
 $(window).on('resize load',function(){
    var height = $('.section-2').css('height');
+   //console.log(height)
     $('.section-3').css('height',height);
   if($(window).width() < 500){
-    $('.description-appli img').css('width','100%');
+    $('.description-appli img').css('width','70%');
     $('.thumbnail-bis').css('margin','10%');
     $('.catch-phrase').css('font-size','20px');
     $('footer i').addClass('fa-3x');
+    //just added
+    $('#myCarousel img').removeClass('img-responsive');
   }
   else{
     $('.description-appli img').css('width','60%');
     $('.thumbnail-bis').css('margin','10%');
     $('.catch-phrase').css('font-size','28px');
-    $('footer i').addClass('fa-2x')
+    $('footer i').addClass('fa-2x');
+    $('#myCarousel img').addClass('img-responsive');
   }
 });
 
 $(document).scroll(function(){
-  console.log(window.scrollY)
+  //console.log(window.scrollY)
   if(window.scrollY> 620){
     $('nav').fadeIn(1000);
   }

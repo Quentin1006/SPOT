@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 
   <head>
     <meta charset="UTF-8">
@@ -8,6 +8,10 @@
     <title>SPOT</title>
     <meta name="description" content="Application pour géolocaliser les amis qui sont proches de nous">
     <meta name="keywords" content="application, géolocalisation, amis, partage, confidentialité, spot">
+    <meta property="og:url" content="http://spot-app.net" />
+    <meta property="og:type" content="application" />
+    <meta property="og:title" content="Spot:Ne loupes plus tes amis" />
+    <meta property="og:image" content="" />
     
     
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -36,12 +40,14 @@
 }(document, 'script', 'facebook-jssdk'));
 </script>
 <!--/End Facebook SDK -->
-<header> 
+<header>
+    <!-- Navbar fixé 
     <nav class="navbar navbar-fixed-top ">
   <div class="container-fluid text-center">
-        <img alt="Brand" src="img/spot1.png "width="10%">
+        <img alt="Brand" src="img/spot1.png "width="8%">
   </div>
 </nav>
+-->
 <div class="jumbotron">
     <div class="container">
 
@@ -49,18 +55,18 @@
 
          <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="img-responsive" src="img/cover.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/cover.jpg" alt="" width="100%">
             </div>
 
             <div class="item">
-                <img class="img-responsive" src="img/arnaud.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/arnaud.jpg" alt="" width="100%">
             </div>
 
              <div class="item">
-                <img class="img-responsive" src="img/fille.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/fille.jpg" alt="" width="100%">
             </div>
             <div class="item">
-                <img class="img-responsive" src="img/filles.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/filles.jpg" alt="" width="100%">
             </div>
 
             <a href="#mycarousel" class="left carousel-control" role="button" data-slide="prev">
@@ -86,8 +92,8 @@
             <h1>Ne loupe plus les amis que tu croises </h1>
 
             <div class="button-play-spot">
-                <a class="button-play-intro" href="#spot">
-                    <img width="10%" src="img/play-button.png">
+                <a style="" class="button-play-intro" href="#spot">
+                    <img src="img/play-button.png" width="10%" alt="bouton play">
                 </a>
             </div>
 
@@ -246,15 +252,15 @@
           <div class="col-xs-4  info-footer">
 
             <a href="mailto:info@spot-app.net">
-                <i class="fa fa-envelope-o fa-2x" style="color:#00afb4"></i>
+                <i class="fa fa-envelope-o fa-2x" ></i>
                 <span class="hidden-xs" style="font-size:20px">Nous contacter</span>
             </a>
             
           </div>
           <div class="col-xs-4  info-footer">
             <a href="cgu.html">
-                <i class="fa fa-cogs fa-2x" style="color:#00afb4"></i>
-                <span class="hidden-xs" style="font-size:20px">Conditions générales d'utilisation</span>
+                <i class="fa fa-cogs fa-2x" ></i>
+                <span class="hidden-xs" style="font-size:20px">Conditions d'utilisation</span>
             </a>
           </div>
         </div>
@@ -262,7 +268,7 @@
         <div class="logo-spot-footer">
           <img src="img/favicon.png" width="100px"> <br><br>
                 <p style="padding:5px"></p>
-           <span style="color:#00afb4">&#9400; Tout droit réservé Spot application</span>
+           <span >&#9400; Tout droit réservé Spot application</span>
         </div>
       </div>
     </footer>

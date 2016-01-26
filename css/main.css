@@ -5,12 +5,18 @@ body {
 }
 nav{
   display:none;
- background: -webkit-radial-gradient(circle, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+ background: rgba(0,175,180,1);
+ height:60px;
 }
 hr {
   margin:0 30%;
   border:yellow;
 }
+a:hover {
+  text-decoration: none;
+  opacity:0.8;
+}
+
 
 .button-play-spot{
   margin-top: 50px;
@@ -18,16 +24,18 @@ hr {
 
 }
 .button-play-spot img{
-  opacity:0.7;
+  opacity:0.5;
 }
 .button-play-spot img:hover{
   opacity: 1;
+
 }
 .carousel{
   width:100%;
-  max-height:650px;
+  
 }
 .carousel-inner{
+
   height:100%;
 }
 
@@ -49,7 +57,7 @@ hr {
   }
 .img-apple-store {
     position: absolute;
-    top: 580px;
+    bottom: 50px;
     width:100%;
     margin:0 auto;
 }
@@ -59,8 +67,7 @@ hr {
 } 
 
 .jumbotron {
-  max-height:650px;
-  overflow:hidden;
+  
   max-width:100%;
   padding:0;
 }
@@ -70,7 +77,7 @@ hr {
   top:0px;
   text-align: center;
   padding:0px;
-  max-height:650px;
+
   width:100%;
 
 }
@@ -113,8 +120,6 @@ hr {
 
 .learn-more a {
   color: #00afb4;
-  
- 
 }
 .logo-spot-footer {
   text-align: center;
@@ -315,18 +320,15 @@ text-align:left ;
   background-color: #fff;
 
 }
-@media all and (min-width: 768px) and (max-width: 992px){
-  .img-apple-store{
-    position:relative;
-    top:220px;
-  }
-}
 
 
 @media all and (max-width: 768px){
 
-  body{
-    
+  .learn-more{
+    padding-top:0px;
+  }
+  .neighborhood-guides .container .catch-phrase-container{
+    margin-top: 130px
   }
 
   .img-apple-store > a > img{
@@ -351,7 +353,7 @@ text-align:left ;
     height:400px;
   }
   #myCarousel img {
-    height:400px;
+    height:480px;
   }
   .jumbotron h1 {
     font-size: 24px;
@@ -368,10 +370,6 @@ text-align:left ;
   }
   .thumbnail-bis p {
     text-align:center;
-  }
-  .img-apple-store{
-    position:relative;
-    top:120px;
   }
   .img-apple-store img{
     width:70px;
@@ -390,6 +388,12 @@ text-align:left ;
     font-size:20px;
 
   }
+  .img-apple-store {
+    position: absolute;
+    bottom: 30px;
+    width:100%;
+    margin:0 auto;
+}
   .jumbotron-content h1{
     position:relative;
     top:20px;
@@ -401,7 +405,7 @@ text-align:left ;
     width:30%;
   }
    .description-appli img{
-    width:100%;
+    width:70%;
    } 
    .section-1, .section-2, .section-3{
     padding-bottom:30px;
