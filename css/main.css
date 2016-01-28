@@ -39,21 +39,11 @@ a:hover {
   height:100%;
 }
 
-.button-stop-spot{
-    top: 0px;
-    left:0px;
-    width: 76px;
-    height: 76px;
-  }
-
-.button-stop-spot img {
+.button-stop-spot .close-video {
     position: fixed;
     top:10px;
-    right:0px;
+    right:10px;
     z-index: 1010;
-  }
-.button-stop-spot .hidden{
-
   }
 .img-apple-store {
     position: absolute;
