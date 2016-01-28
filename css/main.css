@@ -3,18 +3,12 @@ body {
     overflow-X:hidden;
     
 }
-nav{
-  display:none;
- background: rgba(0,175,180,1);
- height:60px;
-}
 hr {
   margin:0 30%;
   border:yellow;
 }
 a:hover {
   text-decoration: none;
-  opacity:0.8;
 }
 
 
@@ -40,16 +34,16 @@ a:hover {
 }
 
 .button-stop-spot .close-video {
-    position: fixed;
-    top:10px;
-    right:10px;
-    z-index: 1010;
+  position: fixed;
+  top:10px;
+  right:10px;
+  z-index: 1010;
   }
 .img-apple-store {
-    position: absolute;
-    bottom: 50px;
-    width:100%;
-    margin:0 auto;
+  position: fixed;
+  bottom: 50px;
+  width:100%;
+  margin:0 auto;
 }
 .img-apple-store a img {
   height:41px;
@@ -79,8 +73,6 @@ a:hover {
 }
 
 .jumbotron h1 {
-
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight:200;
   color: #fff;
   font-size: 3.5vw; 
@@ -124,8 +116,8 @@ a:hover {
 }
 
 #myCarousel img {
-  filter:brightness(60%);
-  -webkit-filter: brightness(60%);
+  filter:brightness(50%);
+  -webkit-filter: brightness(30%);
   -o-filter: brightness(60%);
   -moz-filter: brightness(60%);
 }
@@ -191,7 +183,7 @@ a:hover {
   background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
   border-bottom:1px solid rgba(0,175,180,1); 
   border-top: 2px solid rgba(0,175,180,1);
-  box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,1) inset;
+  box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,0.5) inset;
 }
 .section-2{
   box-shadow: 0 0 25px rgba(0,175,180,0.3) inset, 0 0 20px rgba(0,175,180,0.3) inset;
@@ -310,6 +302,16 @@ text-align:left ;
   background-color: #fff;
 
 }
+@media all and (max-width: 1200px){
+  .image-apple-store{
+    position: absolute;
+    bottom: 50px;
+    width:100%;
+    margin:0 auto;
+
+  }
+}
+
 
 
 @media all and (max-width: 768px){

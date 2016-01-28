@@ -43,47 +43,49 @@ $(function(){
       $(this).css('width','60%');
     }
   });
-  $('i').mouseover(function(){
-    $(this).css('position','relative').css('top','-3px');
-    $(this).css('color','rgba(0,175,180,0.2)');
-    $(this).next().css('color','rgba(0,175,180,0.6)');
-  });
-  $('i').mouseout(function(){
-    $(this).css('position','relative').css('top','3px');
-    $(this).css('color','rgba(0,175,180,1)');
-    $(this).next().css('color','rgba(0,175,180,1)');
-  });
-$(window).on('resize load',function(){
+
+  $('footer a ').mouseover(function(){
+    $(this).css('opacity','0.7');
+    $(this).mouseout(function(){
+      $(this).css('opacity','1');
+    })
+
+  })
+  function resizing(){
    var height = $('.section-2').css('height');
    //console.log(height)
     $('.section-3').css('height',height);
-  if($(window).width() < 500){
-    $('.description-appli img').css('width','70%');
-    $('.thumbnail-bis').css('margin','10%');
-    $('.catch-phrase').css('font-size','20px');
-    $('footer i').addClass('fa-3x');
-    //just added
-    $('#myCarousel img').removeClass('img-responsive');
+    if($(window).width() < 600){
+      $('.description-appli img').css('width','70%');
+      $('.thumbnail-bis').css('margin','10%');
+      $('.catch-phrase').css('font-size','20px');
+      $('footer i').addClass('fa-3x');
+      $('#myCarousel img').removeClass('img-responsive');
+    }
+    else{
+      $('.description-appli img').css('width','60%');
+      $('.thumbnail-bis').css('margin','10%');
+      $('.catch-phrase').css('font-size','28px');
+      $('footer i').removeClass('fa-3x');
+      $('#myCarousel img').addClass('img-responsive');
+    }
   }
-  else{
-    $('.description-appli img').css('width','60%');
-    $('.thumbnail-bis').css('margin','10%');
-    $('.catch-phrase').css('font-size','28px');
-    $('footer i').addClass('fa-2x');
-    $('#myCarousel img').addClass('img-responsive');
-  }
-});
+  $(window).resize(resizing);
+  $(document).load(resizing)
 
-$(document).scroll(function(){
-  //console.log(window.scrollY)
-  if(window.scrollY> 620){
-    $('nav').fadeIn(1000);
-  }
-  else{
-    $('nav').css('display','none')
-  }
-})
-
+  
+  //affichage du lien vers l'apple store
+  $(window).on('load scroll resize',function(){
+    var height = $('#myCarousel').css('height');
+    height = parseInt(height);
+    var docHeight = parseInt($(window).height()) + window.scrollY
+    if(height < docHeight  ){
+      $('.img-apple-store').css('position','absolute').css('bottom','70px');
+    }
+    else{
+      $('.img-apple-store').css('position','fixed').css('bottom','70px');
+    }
+  });
 
 });
 
