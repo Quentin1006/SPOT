@@ -117,7 +117,7 @@ a:hover {
 
 #myCarousel img {
   filter:brightness(50%);
-  -webkit-filter: brightness(30%);
+  -webkit-filter: brightness(50%);
   -o-filter: brightness(60%);
   -moz-filter: brightness(60%);
 }
@@ -163,24 +163,17 @@ a:hover {
 }
 .section-1{
   background-color: rgba(0,175,180,0.6);
-   background: linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
-  background: -moz-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
-  background: -o-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
-  background: -webkit-linear-gradient(rgba(0,175,180,0.4),rgba(0,175,180,0.6));
+   
   padding-bottom: 20px
  
 }
 .section-3{
   background-color: rgba(0,175,180,0.6);
-   background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
-  background: -moz-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
-  background: -o-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
-  background: -webkit-linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
+  
   padding-bottom:20px;
  
 }
 .section-1, .section-3{
-  background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.4));
   border-bottom:1px solid rgba(0,175,180,1); 
   border-top: 2px solid rgba(0,175,180,1);
   box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,0.5) inset;
