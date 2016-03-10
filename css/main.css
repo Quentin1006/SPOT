@@ -19,11 +19,40 @@ a:hover {
 }
 .button-play-spot img{
   opacity:0.5;
+  animation: flashing 2.5s ease-in-out;
 }
 .button-play-spot img:hover{
   opacity: 1;
+  
 
 }
+
+@keyframes flashing {
+  0% {
+    opacity:0.2;
+    }
+  25% {
+    opacity:0.5;
+  }
+  50% {
+    opacity:1;
+  }
+  70% {
+    opacity:0.5;
+  }
+  80% {
+     opacity:1;
+  }
+  90% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+
+
+}
+
 .carousel{
   width:100%;
   
@@ -90,6 +119,20 @@ a:hover {
 .logo-spot{
   position:relative;
   top:5px;
+  animation: appears 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes appears{
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+
+  }
+  100% {
+    transform: translateY(0px);
+
+  }
 }
 
 .learn-more {
@@ -116,8 +159,8 @@ a:hover {
 }
 
 #myCarousel img {
-  filter:brightness(50%);
-  -webkit-filter: brightness(50%);
+  filter:brightness(60%);
+  -webkit-filter: brightness(60%);
   -o-filter: brightness(60%);
   -moz-filter: brightness(60%);
 }
@@ -163,23 +206,44 @@ a:hover {
 }
 .section-1{
   background-color: rgba(0,175,180,0.6);
-   
-  padding-bottom: 20px
+  padding-bottom: 20px;
  
 }
+
+.section-1:before{
+  top:0px;
+  margin: 0 auto;
+  height:50px;
+  width:50px;
+  background-color: #fff;
+  transform: translateY(-51%) rotate(45deg);
+  border-bottom:2px solid rgba(0,175,180,1); 
+  border-right:2px solid rgba(0,175,180,1); 
+
+}
+
 .section-3{
   background-color: rgba(0,175,180,0.6);
-  
   padding-bottom:20px;
- 
 }
+.section-3:before{
+  top:0px;
+  margin: 0 auto;
+  height:50px;
+  width:50px;
+  background-color: #fff;
+  transform: translateY(-51%) rotate(45deg);
+  border-bottom:2px solid rgba(0,175,180,1); 
+  border-right:2px solid rgba(0,175,180,1); 
+
+}
+
 .section-1, .section-3{
   border-bottom:1px solid rgba(0,175,180,1); 
   border-top: 2px solid rgba(0,175,180,1);
   box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,0.5) inset;
 }
 .section-2{
-  box-shadow: 0 0 25px rgba(0,175,180,0.3) inset, 0 0 20px rgba(0,175,180,0.3) inset;
 }
 
 .slideshow {
