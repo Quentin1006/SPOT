@@ -1,10 +1,16 @@
-
-
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     overflow-X:hidden;
     
 }
+hr {
+  margin:0 30%;
+  border:yellow;
+}
+a:hover {
+  text-decoration: none;
+}
+
 
 .button-play-spot{
   margin-top: 50px;
@@ -12,38 +18,61 @@ body {
 
 }
 .button-play-spot img{
-  opacity:0.7;
+  opacity:0.5;
+  animation: flashing 2.5s ease-in-out;
 }
 .button-play-spot img:hover{
   opacity: 1;
+  
+
 }
+
+@keyframes flashing {
+  0% {
+    opacity:0.2;
+    }
+  25% {
+    opacity:0.5;
+  }
+  50% {
+    opacity:1;
+  }
+  70% {
+    opacity:0.5;
+  }
+  80% {
+     opacity:1;
+  }
+  90% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+
+
+}
+
 .carousel{
   width:100%;
-  max-height:650px;
+  
 }
 .carousel-inner{
+
   height:100%;
 }
 
-.button-stop-spot{
-    top: 0px;
-    left:0px;
-    width: 76px;
-    height: 76px;
-  }
-
-.button-stop-spot img {
-    position: fixed;
-    top:10px;
-    right:0px;
-    z-index: 1010;
-  }
-.button-stop-spot .hidden{
-
+.button-stop-spot .close-video {
+  position: fixed;
+  top:10px;
+  right:10px;
+  z-index: 1010;
   }
 .img-apple-store {
-    position: relative;
-    top: 160px;
+  position: fixed;
+  bottom: 50px;
+  width:100%;
+  margin:0 auto;
 }
 .img-apple-store a img {
   height:41px;
@@ -51,8 +80,7 @@ body {
 } 
 
 .jumbotron {
-  max-height:650px;
-  overflow:hidden;
+  
   max-width:100%;
   padding:0;
 }
@@ -62,7 +90,7 @@ body {
   top:0px;
   text-align: center;
   padding:0px;
-  max-height:650px;
+
   width:100%;
 
 }
@@ -74,8 +102,6 @@ body {
 }
 
 .jumbotron h1 {
-
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight:200;
   color: #fff;
   font-size: 3.5vw; 
@@ -93,6 +119,20 @@ body {
 .logo-spot{
   position:relative;
   top:5px;
+  animation: appears 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes appears{
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+
+  }
+  100% {
+    transform: translateY(0px);
+
+  }
 }
 
 .learn-more {
@@ -105,8 +145,6 @@ body {
 
 .learn-more a {
   color: #00afb4;
-  
- 
 }
 .logo-spot-footer {
   text-align: center;
@@ -118,6 +156,13 @@ body {
   position: relative;
   bottom:12px;
   right:8px;
+}
+
+#myCarousel img {
+  filter:brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -moz-filter: brightness(60%);
 }
 
 
@@ -159,15 +204,46 @@ body {
     text-align:center;
     margin-top: 40px;
 }
+.section-1{
+  background-color: rgba(0,175,180,0.6);
+  padding-bottom: 20px;
+ 
+}
+
+.section-1:before{
+  top:0px;
+  margin: 0 auto;
+  height:50px;
+  width:50px;
+  background-color: #fff;
+  transform: translateY(-51%) rotate(45deg);
+  border-bottom:2px solid rgba(0,175,180,1); 
+  border-right:2px solid rgba(0,175,180,1); 
+
+}
+
+.section-3{
+  background-color: rgba(0,175,180,0.6);
+  padding-bottom:20px;
+}
+.section-3:before{
+  top:0px;
+  margin: 0 auto;
+  height:50px;
+  width:50px;
+  background-color: #fff;
+  transform: translateY(-51%) rotate(45deg);
+  border-bottom:2px solid rgba(0,175,180,1); 
+  border-right:2px solid rgba(0,175,180,1); 
+
+}
+
 .section-1, .section-3{
-  background: linear-gradient(rgba(0,175,180,0.6),rgba(0,175,180,0.1));
   border-bottom:1px solid rgba(0,175,180,1); 
-  border-top: 1px solid rgba(0,175,180,1);
-  box-shadow: 1px 1px 5px rgba(0,175,180,1);
+  border-top: 2px solid rgba(0,175,180,1);
+  box-shadow: 0 0 25px rgba(0,175,180,1) inset, 0 0 20px rgba(0,175,180,0.5) inset;
 }
 .section-2{
-  background: linear-gradient(rgba(255,255,255,1),rgba(0,175,180,0.2));
-  box-shadow: 1px -1px 3px rgba(0,175,180,1);
 }
 
 .slideshow {
@@ -187,11 +263,15 @@ body {
 .slideshow li {
    float: left;
 }
+.thumbnail i {
+  transition : all 1s;
+}
 
 .thumbnail h3 {
     font-weight: bold;
     color:#00afb4;
     text-align: center;
+     transition : all 5s;
 
 }
 
@@ -203,7 +283,8 @@ body {
 }
 
 .thumbnail-bis {
-    margin: 15%;
+    margin: 10% 15%;
+    padding:10px;
     font-size: 2vw;
     line-height: 1.5em;
     text-align:center;
@@ -278,13 +359,27 @@ text-align:left ;
   background-color: #fff;
 
 }
+@media all and (max-width: 1200px){
+  .image-apple-store{
+    position: absolute;
+    bottom: 50px;
+    width:100%;
+    margin:0 auto;
+
+  }
+}
+
 
 
 @media all and (max-width: 768px){
 
-  body{
-    
+  .learn-more{
+    padding-top:0px;
   }
+  .neighborhood-guides .container .catch-phrase-container{
+    margin-top: 130px
+  }
+
   .img-apple-store > a > img{
     width:100px;
 
@@ -302,8 +397,13 @@ text-align:left ;
   .third-paragraph{
     padding-top: 4%;
     margin:4% 15% ;
-}
-
+  }
+  .jumbotron {
+    height:400px;
+  }
+  #myCarousel img {
+    height:480px;
+  }
   .jumbotron h1 {
     font-size: 24px;
   }
@@ -320,17 +420,44 @@ text-align:left ;
   .thumbnail-bis p {
     text-align:center;
   }
-  .img-apple-store{
-    position:relative;
-    top:150px;
+  .img-apple-store img{
+    width:70px;
   }
   .button-play-spot{
-    margin-top: 20px
+    margin-top: 60px
   }
-  .catch-phrase{
+  .button-play-intro{
+    position: relative;
+    top:0px;
+  }
+  .button-play-intro img{
+    width:80px;
+  }
+  .neighborhood-guides > .container > .catch-phrase{
     font-size:20px;
 
   }
-
+  .img-apple-store {
+    position: absolute;
+    bottom: 30px;
+    width:100%;
+    margin:0 auto;
+}
+  .jumbotron-content h1{
+    position:relative;
+    top:20px;
+    font-size:22px;
+  }
+  .logo-spot{
+    position:relative;
+    top:20px;
+    width:30%;
+  }
+   .description-appli img{
+    width:70%;
+   } 
+   .section-1, .section-2, .section-3{
+    padding-bottom:30px;
+   }
     
 }

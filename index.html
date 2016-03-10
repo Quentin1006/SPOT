@@ -9,6 +9,12 @@
     <meta name="description" content="Application pour géolocaliser les amis qui sont proches de nous">
     <meta name="keywords" content="application, géolocalisation, amis, partage, confidentialité, spot">
     <meta property="og:url" content="http://spot-app.net" />
+<<<<<<< HEAD
+=======
+    <meta property="og:type" content="application" />
+    <meta property="og:title" content="Spot:Ne loupes plus tes amis" />
+    <meta property="og:image" content="img/spot1.png" />
+>>>>>>> test
     
     
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -26,6 +32,7 @@
   </head>
 
   <body>
+<<<<<<< HEAD
 
 <!--Facebook SDK -->
 <div id="fb-root"></div>
@@ -40,6 +47,27 @@
   <!--/End Facebook SDK -->
 
 <header> 
+=======
+<!-- Facebook SDK -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=184368881921060";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!--/End Facebook SDK -->
+<header>
+    <!-- Navbar fixé 
+    <nav class="navbar navbar-fixed-top ">
+  <div class="container-fluid text-center">
+        <img alt="Brand" src="img/spot1.png "width="8%">
+  </div>
+</nav>
+-->
+>>>>>>> test
 <div class="jumbotron">
     <div class="container">
 
@@ -47,18 +75,18 @@
 
          <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="img-responsive" src="img/cover.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/cover.jpg" alt="" width="100%">
             </div>
 
             <div class="item">
-                <img class="img-responsive" src="img/arnaud.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/arnaud.jpg" alt="" width="100%">
             </div>
 
              <div class="item">
-                <img class="img-responsive" src="img/fille.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/fille.jpg" alt="" width="100%">
             </div>
             <div class="item">
-                <img class="img-responsive" src="img/filles.jpg" alt="" width="100%" height="100%">
+                <img class="img-responsive" src="img/filles.jpg" alt="" width="100%">
             </div>
 
             <a href="#mycarousel" class="left carousel-control" role="button" data-slide="prev">
@@ -84,17 +112,23 @@
             <h1>Ne loupe plus les amis que tu croises </h1>
 
             <div class="button-play-spot">
-                <a class="button-play-intro" href="#spot">
-                    <img width="10%" src="img/play-button.png">
+                <a style="" class="button-play-intro" href="#spot">
+                    <img src="img/play-button.png" width="10%" alt="bouton play">
                 </a>
             </div>
 
             <div class="img-apple-store" >
                 <a href="#">
                     <img src="img/app-store.png"/>
+<<<<<<< HEAD
                 </a>&nbsp;<br/>
                 <a href="https://www.facebook.com/applicationspot?__mref=message_bubble" class="btn text-left">
                      <div class="fb-like" style="z-index" data-colorscheme="light" data-href="https://www.facebook.com/applicationspot/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+=======
+                </a>&nbsp;
+                <a class="hidden-xs" href="https://www.facebook.com/applicationspot?__mref=message_bubble" class="btn text-left">
+                    <div class="fb-like" data-href="https://www.facebook.com/applicationspot/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+>>>>>>> test
                     <!-- Construction logo : style="background:-webkit-linear-gradient(left bottom,#3b5998,#4e69a2); color:#fff; width:128px; height:42px; border-radius:6px;" 
                     <i class="fa fa-facebook-official " style="font-size:30px; position:relative; left:-20px; color:#fff"></i><span style="position:relative; top:-4px; letter-spacing: 3px; font-size:18px">Like </span> -->
                 </a>
@@ -106,7 +140,7 @@
 
         <div class="button-stop-spot hidden">
             <a href="#">
-                <img src="img/close-button.gif" width="50px">
+                <span class="close-video" style="color:#fff; font-size:30px">&times;</span>
             </a>
         </div>
         
@@ -175,13 +209,14 @@
                     <p>Spot te previent quand un ami est proche de toi sans jamais révéler vos positions exactes. Vous savez donc tous les 2 que vous n’êtes pas loin, à vous de vous retrouver (...ou pas)!
                     Tu peux aussi bloquer un ami temporairement si tu ne veux pas prendre le risque que cet ami sache que tu es dans le coin. Dans ce cas, ni toi, ni lui n'êtes alertés. 
                     </p>
+                    <hr/>
                 </div>
             </div>
            
 
             <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                 <div class="thumbnail-bis">
-                    <img class="img-rounded img-thumbnail" src="img/image-description-1.png" alt="image description" width="70%">
+                    <img class="img-rounded" src="img/image-description-1.png" alt="image description" width="60%">
                 </div>
             </div>
             
@@ -193,12 +228,13 @@
                     
                     <p>Tu peux te Spoter sur un lieu pour apparaitre sur le mur de tes amis et y taguer tes amis. Ce mur est visible aussi sous forme de map où tu peux voir où tous tes amis se sont Spotés dans les dernières 24h. Peut-être que l’un d’entre eux n’est pas loin en ce moment!
                     </p>
+                    <hr/>
                 </div>
             </div> 
 
             <div class="col-xs-12 col-sm-6">
                 <div class="thumbnail-bis" >
-                    <img class="img-rounded img-thumbnail" src="img/image-description-2.png" alt="image description" width="70%">                   
+                    <img class="img-rounded" src="img/image-description-2.png" alt="image description" width="60%">                   
                 </div>
             </div>
         </div>      
@@ -210,12 +246,14 @@
                    
                     <p>Envoie en un 1 click ton emplacement ou un lieu de RDV à un ami. Il recevra automatiquement un plan avec le chemin le plus rapide pour s’y rendre!
                     </p>
+                    <hr/>
                     
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                 <div class="thumbnail-bis">
-                       <img  class="img-rounded img-thumbnail" src="img/image-description-3.png" alt="image description 3" width="70%">
+                       <img  class="img-rounded" src="img/image-description-3.png" alt="image description 3" width="60%">
+
                 </div>
             </div> 
         </div>          
@@ -230,24 +268,28 @@
       <div class="container">
       <p style="padding:10px"></p>
         <div class="row text-center">
-          <div class="col-xs-4 info-footer">
+          <div class="col-xs-4  info-footer">
             <a  href="https://www.facebook.com/applicationspot?__mref=message_bubble" target="_blank">
                 <i class="fa fa-facebook-official fa-2x" style="color:#00afb4"></i>
+<<<<<<< HEAD
                 <span style="font-size:20px">Facebook</span><br/>
+=======
+                <span  class="hidden-xs" style="font-size:20px">Facebook</span>
+>>>>>>> test
             </a>
-          </div>
-          <div class="col-xs-4 info-footer">
+            </div>
+          <div class="col-xs-4  info-footer">
 
             <a href="mailto:info@spot-app.net">
-                <i class="fa fa-envelope-o fa-2x" style="color:#00afb4"></i>
-                <span style="font-size:20px">Nous contacter</span>
+                <i class="fa fa-envelope-o fa-2x" ></i>
+                <span class="hidden-xs" style="font-size:20px">Nous contacter</span>
             </a>
             
           </div>
-          <div class="col-xs-4 info-footer">
+          <div class="col-xs-4  info-footer">
             <a href="cgu.html">
-                <i class="fa fa-cogs fa-2x" style="color:#00afb4"></i>
-                <span style="font-size:20px">Conditions générales d'utilisation</span>
+                <i class="fa fa-cogs fa-2x" ></i>
+                <span class="hidden-xs" style="font-size:20px">Conditions d'utilisation</span>
             </a>
           </div>
         </div>
@@ -255,7 +297,7 @@
         <div class="logo-spot-footer">
           <img src="img/favicon.png" width="100px"> <br><br>
                 <p style="padding:5px"></p>
-           <span style="color:#00afb4">&#9400; Tout droit réservé Spot application</span>
+           <span >&#9400; Tout droit réservé Spot application</span>
         </div>
       </div>
     </footer>
