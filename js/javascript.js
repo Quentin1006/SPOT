@@ -33,17 +33,6 @@ var initVideo = function () {
 $(function(){
   $('#myCarousel').carousel({ interval: 5000 });
 
-  $('.description-appli img').mouseover(function(){
-    if($(window).width() > 700){
-      $(this).css('width','61%');
-    }
-  });
-  $(' .description-appli img').mouseout(function(){
-    if($(window).width() > 700){
-      $(this).css('width','60%');
-    }
-  });
-
   $('footer a ').mouseover(function(){
     $(this).css('opacity','0.7');
     $(this).mouseout(function(){
