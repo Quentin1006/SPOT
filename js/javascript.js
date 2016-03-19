@@ -75,6 +75,11 @@ $(function(){
       $('.img-apple-store').css('position','fixed').css('bottom','70px');
     }
   });
+  /*$(document).scroll(function(){
+    if($(".section-1 img").offset().top < window.scrollY+700){
+      $(".section-1 img").addClass("img-animate-right")
+    }
+  });*/
 
 });
 
